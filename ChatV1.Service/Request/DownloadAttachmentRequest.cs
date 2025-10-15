@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ChatV1.Service.Request
+{
+    public class DownloadAttachmentRequest
+    {
+        public long AttachmentId { get; set; }
+        public string ToUserName { get; set; }
+    }
+    public class DownloadAttachmentRequestTest
+    {
+        public long AttachmentId { get; set; }
+        
+    }
+
+
+}
