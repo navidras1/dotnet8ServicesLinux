@@ -51,7 +51,7 @@ public partial class ChatV1Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=185.179.216.215;Database=n1;Username=postgres;Password=N@vid123456");
+        => optionsBuilder.UseNpgsql("Host=82.115.25.140;Database=n1;Username=postgres;Password=mysecretpassword");
 
     //protected override void OnModelCreating(ModelBuilder modelBuilder)
     //{

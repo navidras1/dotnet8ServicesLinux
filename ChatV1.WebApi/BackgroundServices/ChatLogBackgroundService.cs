@@ -32,10 +32,10 @@ namespace ChatV1.WebApi.BackgroundServices
         {
             var factory = new ConnectionFactory
             {
-                Uri = new Uri("amqp://185.179.216.215:5672")
+                Uri = new Uri("amqp://82.115.25.140:5672")
             };
-            factory.UserName = "guest";
-            factory.Password = "guest";
+            factory.UserName = "admin";
+            factory.Password = "adminpassword";
 
             // create connection  
             _connection = factory.CreateConnection();

@@ -32,7 +32,7 @@ namespace ChatV1.WebApi.BackgroundServices
         {
             var factory = new ConnectionFactory
             {
-                Uri = new Uri("amqp://185.179.216.215:5672")
+                Uri = new Uri("amqp://82.115.25.140:5672")
             };
             factory.UserName = _rabbitMqSettings.Value.UserName;
             factory.Password = _rabbitMqSettings.Value.Password;
