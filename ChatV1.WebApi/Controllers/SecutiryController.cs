@@ -60,13 +60,13 @@ namespace ChatV1.WebApi.Controllers
         {
             Random random = new Random();
             var randNum = random.Next();
-            var userName = request.username + randNum;
+            var userName = request.username;
             List<Claim> claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.Name, userName));
             claims.Add(new Claim(ClaimTypes.NameIdentifier, randNum.ToString()));
-            GenerateJwtTokenRequest generateJwtTokenRequest = new GenerateJwtTokenRequest { username= "" , Claims = claims};
+            GenerateJwtTokenRequest generateJwtTokenRequest = new GenerateJwtTokenRequest { username = "", Claims = claims };
             var token = GenerateJwtToken(generateJwtTokenRequest);
-            var res = new { userName= userName  , token =token };
+            var res = new { userName = userName, token = token };
             //GenerateJwtToken()
             return Ok(res);
         }
