@@ -229,8 +229,8 @@ namespace ChatV1.Service.Services
             try
             {
 
-                var fromUserNameDetails = await _griffinAirAvation.GetEployeeDetails(new GetEployeeDetailsRequest { UserName = request.FromUserName });
-                var toUserNameDetails = await _griffinAirAvation.GetEployeeDetails(new GetEployeeDetailsRequest { UserName = request.ToUserName });
+                // var fromUserNameDetails = await _griffinAirAvation.GetEployeeDetails(new GetEployeeDetailsRequest { UserName = request.FromUserName });
+                // var toUserNameDetails = await _griffinAirAvation.GetEployeeDetails(new GetEployeeDetailsRequest { UserName = request.ToUserName });
                 foreach (var message in request.Messages)
                 {
                     if (string.IsNullOrEmpty(message.Message))
@@ -247,10 +247,10 @@ namespace ChatV1.Service.Services
                         ClientDateTime = clientDateTime,
 
                         //FromEmpId = request.FromEmpId,
-                        FromEmpId = Convert.ToInt32(fromUserNameDetails.result[0]["pkEmployee"]),
+                        FromEmpId = Convert.ToInt32(1),
 
                         //ToEmPid = request.ToEmPid,
-                        ToEmPid = Convert.ToInt32(toUserNameDetails.result[0]["pkEmployee"]),
+                        ToEmPid = Convert.ToInt32(1),
 
                         Message = message.Message,
                         FromUserName = request.FromUserName,

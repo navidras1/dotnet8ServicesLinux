@@ -44,7 +44,7 @@ namespace ChatV1.WebApi.BackgroundServices
             var privateChat = "";
             if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
             {
-                privateChat = "privateChatOnlocalServer";
+                privateChat = "privateChatV2";
             }
             else
             {
@@ -78,7 +78,7 @@ namespace ChatV1.WebApi.BackgroundServices
             var privateChat = "";
             if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
             {
-                privateChat = "privateChatOnlocalServer";
+                privateChat = "privateChatV2";
             }
             else
             {
